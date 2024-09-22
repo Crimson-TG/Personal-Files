@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+   
+    <link rel="stylesheet" href="css/navfoot.css">
+    <style>
+      
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .aside {
+      flex: 0 0 200px;
+      background-color: #E6F0F5;
+      padding: 20px;
+    }
+
+    .nav {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .nav li {
+      margin-bottom: 10px;
+    }
+
+    .nav li a {
+      color: #3498DB;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .nav li a:hover {
+      color: #236FA1;
+    }
+
+    .article {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-right: 30px;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-name {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .profile-email {
+      font-size: 18px;
+      color: #888;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #3498DB;
+    }
+
+    .section-content {
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #F2F8FC;
+    }
+
+    .footer {
+      font-size: 14px;
+      text-align: center;
+      color: #888;
+      margin-top: 50px;
+      width: 100%;
+      background-color: #E6F0F5;
+      padding: 20px;
+    }
+    /*code for profile*/
+    
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 20px;
+  
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  right: 30px;
+  top: 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 1px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+
+    </style>
+    
+    
+</head>
+
+<body>
+ 
+    <div class="headerContainer">
+        <header>
+            <h2 class="logo">lazhopee</h2>
+            <nav class="navi">
+                <a href="indexuser.html">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="cart.html">CART</a>
+                <a href="contact.html">CONTACT</a>
+                
+                <div class="dropdown" id="dropdown">
+                    <img class="user-avatar" src="imgs/about/jianon.jpg" alt="User Avatar" onclick="toggleDropdown()">
+                    <div class="dropdown-content">
+                      <a href="profile.html">Profile</a>
+                      <a href="">Settings</a>
+                      <a href="Login.html">Logout</a>
+                    </div>
+                  </div>
+        
+              
+            </nav>
+         
+            
+        </header>
+        
+
+    </div>
+    <!--Header/Nav end-->
+    <br><br><br><br>
+    
+    <div class="container">
+        <div class="aside">
+          <ul class="nav">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">My Purchases</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">My Vouchers</a></li>
+          </ul>
+        </div>
+    
+        <div class="article">
+          <div class="profile">
+            <div class="profile-picture">
+            </div>            
+            <div class="profile-info">                                          
+              <div class="profile-name">John Jian Morastel</div>
+              <div class="profile-email">danzelnyopagodna@example.com</div>
+            </div>
+          </div>
+    
+          <div class="section">
+            <div class="section-title">My Orders</div>
+            <div class="section-content">
+           
+              <p>You have no orders yet.</p>
+            </div>
+          </div>
+    
+          <div class="section">
+            <div class="section-title">My Account</div>
+            <div class="section-content">
+            
+              <p>Username: joemama</p>
+              <p>Joined Lazhopee on: April 29, 2024</p>
+              <p>Phone Number: 1234567890</p>
+              <p>Address: 123 Main Street, City, Country</p>
+              <p>Payment Method: Credit Card</p>
+            </div>
+          </div>
+    
+          <div class="section">
+            <div class="section-title">My Reviews</div>
+            <div class="section-content">
+           
+              <p>You have not written any reviews yet.</p>
+            </div>
+          </div>
+    
+          <div class="section">
+            <div class="section-title">My Wishlist</div>
+            <div class="section-content">
+             
+              <p>Your wishlist is empty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer>
+        <div class="content"> 
+            <div class="top"> 
+                <div class="logo-details"> 
+                    <i class="fab fa-slack"></i> 
+                    <span class="logo_name"> Ssshhhh </span> 
+                    </div> 
+                    <div class="media-icons"> 
+                        <a href="#"><i class="fab fa-facebook-f"></i>
+                        </a> 
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#">
+                        <i class="fab fa-instagram"></i></a> 
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+                        <a href="#"><i class="fab fa-youtube"></i></a> 
+                        </div>
+                         </div> <div class="link-boxes"> 
+                             <ul class="box"> 
+                                 <li class="link_name"> About Us </li> 
+                                 <li><a href="#">Home</a></li> 
+                                 <li><a href="#">Contact us</a></li> 
+                                 <li><a href="#">About us</a></li> 
+                                 <li><a href="#">Get started</a></li> </ul> 
+                             <ul class="box"> 
+                                 <li class="link_name"> Payment </li> 
+                                 <li><a href="#"> Gcash </a></li> 
+                                 <li><a href="#"> PayMaya </a></li> 
+                                 <li><a href="#"> </a></li> 
+                                 <li><a href="#"> </a></li> 
+                             </ul> 
+                             <ul class="box"> 
+                                 <li class="link_name"> Account </li> 
+                                 <li><a href="#">Profile</a></li> 
+                                 <li><a href="#">My account</a></li> 
+                                 <li><a href="#">Prefrences</a></li> 
+                                 <li><a href="#">Purchase</a></li> 
+                              </ul> 
+                              <ul class="box"> 
+                                  <li class="link_name"> Contacts </li> 
+                                  <li><a href="#"> 🗾 180 Nazareth Compound Molino III, Bacoor city, Cavite </a></li> 
+                                  <li><a href="#"> 📞  09162626686 </a></li> 
+                                  <li><a href="#"> 📨 Ssshhhh@gmail.com </a></li> 
+                                  <li><a href="#"> 🕕 Monday-Friday  7-5 </a></li> 
+                               </ul> 
+                               <ul class="box input-box"> 
+                                  <li class="link_name">Subscribe</li> 
+                                  <li><input type="text" placeholder="Enter your email"></li> 
+                                  <li><input type="button" value="Subscribe"></li> 
+                                </ul> 
+                                </div> 
+                                </div> 
+                                <div class="bottom-details"> 
+                                    <div class="bottom_text"> 
+                                        <span class="copyright_text">Copyright © 2023 <a href="#"> Ssshhhh </a> All rights reserved</span> 
+                                        <span class="policy_terms"> 
+                                            <a href="#"> Privacy policy</a> 
+                                            <a href="#">Terms & condition</a> 
+                 </span> 
+             </div> 
+         </div> 
+     </footer> 
+</body>
+
+<script src="js/profile.js"></script>
+
+
+</html>

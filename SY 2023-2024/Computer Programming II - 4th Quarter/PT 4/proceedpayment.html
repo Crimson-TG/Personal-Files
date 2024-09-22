@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BoxIcons v2.1.2 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Montserrat Font and others -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/navfoot.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <style>
+        
+.AboutContainer
+    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 80%;
+    background: #f2f3f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bellota Text', cursive;
+    margin-left: 130px;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .card
+{
+    width: 280px;
+    height: 416px;
+    padding: 60px 30px;
+    margin: 20px;
+    background: #f2f3f7;
+    box-shadow: 0.6em 0.6em 1.2em #d2dce9,
+                -0.5em -0.5em 1em #ffffff;
+   border-radius: 20px;
+   justify-content: center;
+}
+.container .card .content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    
+}
+.container .card .content .imgBx
+{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    margin: auto;
+}
+.container .card .content .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.container .card .content .contentBx h4
+{
+    color: #36187d;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.container .card .content .contentBx h5
+{
+    color: #6c758f;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.container .card .content .sci
+{
+    margin-top: 20px;
+}
+.container .card .content .sci a
+{
+    text-decoration: none;
+    color: #6c758f;
+    font-size: 30px;
+    margin: 10px;
+    transition: color 0.4s;
+}
+.container .card .content .sci a:hover
+{
+    color: #0196e3;
+}
+
+/*textpart code*/
+.textPart {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .headerAbout {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .AboutTextcontainer {
+      background-color: #f2f2f2;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .AboutTextcontainer h1, h2 {
+       text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .AboutTextcontainer p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    
+    
+    
+    /*code for profile*/
+    
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 20px;
+  
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  right: 30px;
+  top: 30px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 1px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+
+    </style>
+    
+    
+</head>
+
+<body>
+ 
+    <div class="headerContainer">
+        <header>
+            <h2 class="logo">lazhopee</h2>
+            <nav class="navi">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CART</a>
+                <a href="#">CONTACT</a>
+                
+                <div class="dropdown" id="dropdown">
+                    <img class="user-avatar" src="imgs/about/dave.jpg" alt="User Avatar" onclick="toggleDropdown()">
+                    <div class="dropdown-content">
+                      <a href="#">Profile</a>
+                      <a href="#">Settings</a>
+                      <a href="#">Logout</a>
+                    </div>
+                  </div>
+        
+              
+            </nav>
+                      
+                  
+                  
+            
+        </header>
+        
+
+    </div>
+    <!--Header/Nav end-->
+    <br><br><br><br>
+    <div class="container">
+
+        <form action="order.php" method="post">
+    
+            <div class="row">
+    
+                <div class="col">
+    
+                    <h3 class="title">billing address</h3>
+    
+                    <div class="inputBox">
+                        <span>full name :</span>
+                        <input type="text" placeholder="" id="FullName">
+                    </div>
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="email" placeholder="example@example.com" id="Email">
+                    </div>
+                    <div class="inputBox">
+                        <span>address :</span>
+                        <input type="text" placeholder="room - street - locality" id="Address">
+                    </div>
+                    <div class="inputBox">
+                        <span>city :</span>
+                        <input type="text" placeholder="" input="City">
+                    </div>
+    
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>state :</span>
+                            <input type="text" placeholder="" id="State">
+                        </div>
+                        <div class="inputBox">
+                            <span>zip code :</span>
+                            <input type="text" placeholder="123 456" id="ZipCode">
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="col">
+    
+                    <h3 class="title">payment</h3>
+    
+                    <div class="inputBox">
+                        <span>cards accepted :</span>
+                        <img src="imgs/banners/paymentfrfr.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>name on card :</span>
+                        <input type="text" placeholder="" id="NameOnCard">
+                    </div>
+                    <div class="inputBox">
+                        <span>credit card number :</span>
+                        <input type="number" placeholder="1111-2222-3333-4444" id="CreditCardNum">
+                    </div>
+                    <div class="inputBox">
+                        <span>exp month :</span>
+                        <input type="text" placeholder="january" id="ExpMonth">
+                    </div>
+    
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>exp year :</span>
+                            <input type="number" placeholder="2022" id="ExpYear">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="1234" id="CCV">
+                        </div>
+                    </div>
+    
+                </div>
+        
+            </div>
+            <a href="indexuser.html">
+            <input type="button" value="proceed to checkout" class="submit-btn" onclick="alert('Thank you for your Purchase!');">
+            </a>
+        </form>
+    
+    </div>   
+    <footer>
+        <div class="content"> 
+            <div class="top"> 
+                <div class="logo-details"> 
+                    <i class="fab fa-slack"></i> 
+                    <span class="logo_name"> Ssshhhh </span> 
+                    </div> 
+                    <div class="media-icons"> 
+                        <a href="#"><i class="fab fa-facebook-f"></i>
+                        </a> 
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#">
+                        <i class="fab fa-instagram"></i></a> 
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+                        <a href="#"><i class="fab fa-youtube"></i></a> 
+                        </div>
+                         </div> <div class="link-boxes"> 
+                             <ul class="box"> 
+                                 <li class="link_name"> About Us </li> 
+                                 <li><a href="#">Home</a></li> 
+                                 <li><a href="#">Contact us</a></li> 
+                                 <li><a href="#">About us</a></li> 
+                                 <li><a href="#">Get started</a></li> </ul> 
+                             <ul class="box"> 
+                                 <li class="link_name"> Payment </li> 
+                                 <li><a href="#"> Gcash </a></li> 
+                                 <li><a href="#"> PayMaya </a></li> 
+                                 <li><a href="#"> </a></li> 
+                                 <li><a href="#"> </a></li> 
+                             </ul> 
+                             <ul class="box"> 
+                                 <li class="link_name"> Account </li> 
+                                 <li><a href="#">Profile</a></li> 
+                                 <li><a href="#">My account</a></li> 
+                                 <li><a href="#">Prefrences</a></li> 
+                                 <li><a href="#">Purchase</a></li> 
+                              </ul> 
+                              <ul class="box"> 
+                                  <li class="link_name"> Contacts </li> 
+                                  <li><a href="#"> 🗾 B27 L2 Main Road Phase 3 West Camella Springville Molino III, Bacoor city, Cavite </a></li> 
+                                  <li><a href="#"> 📞  09650622190 </a></li> 
+                                  <li><a href="#"> 📨 Ssshhhh@gmail.com </a></li> 
+                                  <li><a href="#"> 🕕 Monday-Friday  7-5 </a></li> 
+                               </ul> 
+                               <ul class="box input-box"> 
+                                  <li class="link_name">Subscribe</li> 
+                                  <li><input type="text" placeholder="Enter your email"></li> 
+                                  <li><input type="button" value="Subscribe"></li> 
+                                </ul> 
+                                </div> 
+                                </div> 
+                                <div class="bottom-details"> 
+                                    <div class="bottom_text"> 
+                                        <span class="copyright_text">Copyright © 2023 <a href="#"> Ssshhhh </a> All rights reserved</span> 
+                                        <span class="policy_terms"> 
+                                            <a href="#"> Privacy policy</a> 
+                                            <a href="#">Terms & condition</a> 
+                 </span> 
+             </div> 
+         </div> 
+     </footer> 
+</body>
+
+<script src="js/profile.js"></script>
+    
+
+
+</html>

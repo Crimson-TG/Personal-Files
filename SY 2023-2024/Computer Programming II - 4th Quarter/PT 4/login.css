@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 11px 100px;
+    background-color: #49cdf5; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.navi a {
+    position: relative;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navi a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+
+.navi a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+.navi .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    margin-left: 40px;
+}
+
+.navi .btnLogin-popup:hover {
+    background: white;
+    color: #070A3D;
+}
+
+
+form {
+    width: 500px; /* Updated property */
+    height: auto;
+    margin: 15% auto;
+    margin-left: 13%;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 15px 20px black;
+    overflow: hidden;
+}
+
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: black    ;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.container{
+    padding: 35px;
+}
+
+input[type=text], input[type=password]{
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    border: 2px solid #000000;
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    outline: none;
+    background-color: #ffe6e6;
+}
+
+#forgot-psw{
+    font-size: 15px;
+    float: right;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#login-btn{
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,#54bae9, #54bae9);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+#guest-login-btn{
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,#54bae9, #54bae9);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: black    ;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.member{
+    padding: 16px;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    background-color: #54bae9;
+}
+
+#signup-link{
+    color:black;
+    text-decoration: none;
+    cursor: pointer
+}
+
+#signup-link:hover{
+    color:blue
+}
+

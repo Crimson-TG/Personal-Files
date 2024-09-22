@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="headerContainer">
+        <header>
+            <h2 class="logo">lazhopee</h2>
+            <nav class="navi">
+                <a href="index.html">HOME</a>
+                <a href="#"><svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16"> <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="white"></path> </svg>Cart</a>
+                <a href="#">CONTACT</a>
+                <button class="btnLogin-popup">Login</button>
+            </nav>
+        </header>
+    </div>
+    <form action="index.html" method="post"><br>
+        <h1>Login</h1>
+        <div class="container">
+            <input type="text" placeholder="Enter Username" name="uname" pattern=".*\S+.*" title="Username is required" required>
+            <input type="password" placeholder="Enter Password" name="psw" pattern=".*\S+.*" title="Password is required" required>
+            <a href="#" id="forgot-psw">Forgot password?</a>
+            <a href="indexuser.html">
+                <button type="button" id="login-btn">Log in</button>
+            </a>
+            <a href="index.html">
+                <button type="button" id="guest-login-btn">Log in as Guest</button>
+            </a>
+        </div>
+        <div class="member">
+            Not a member? <a href="Register.html" id="signup-link">Register</a>
+        </div>
+        <hr><br>
+        <h2>Lazhoppee</h2>
+    </form>
+</body>
+</html>
