@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>My Interests</title>
+        <link rel="icon" type="image/x-icon" href="Images/cat_logo.png">
+    </head>
+    <body>
+        <header>
+            <h2>My Interests</h2>
+            <p>This webpage shows my Interests in certain things. Feel free to rate their relevance to yours!</p>
+        </header>
+
+    <!--topnav-->
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="table.html">Schedule</a>
+        <a href="interests.html">Interests</a>
+    </div>
+<br>
+    
+    <main>
+    <!--main content-->
+    <div class="row">
+        <div class="column left" style="background-color: #220038c4; border-radius: 8px;">
+        <p>My interests are widely different to each other, some of them are widely irrelevant to each other. But that's actually how people interests work.
+        <br>Since I have many interests, I divided them into two parts.</p>
+        
+        <h3>Here are the lists of my <strong>Interests</strong></h3>
+            <ol>
+                <li>My top 5 interests:</li>
+                    <ul>
+                        <li>Astronomy</li>
+                        <li>Love Songs</li>
+                        <li>Science</li>
+                        <li>Gaming</li>
+                        <li>Coding</li>
+                    </ul>
+                <br>
+                <li>My least interests:</li>
+                    <ul>
+                        <li>Pixel Arts</li>
+                        <li>Gaming Computer Hardware</li>
+                        <li>Table Tennis</li>
+                        <li>Mathematics</li>
+                        <li>Cooking and Foods</li>
+                    </ul>
+            </ol>
+            
+            <!--slider-->
+            <div class="container">
+                <img src="Images/gif2.gif" alt="girl gif" width="500" height="355">
+                <div class="text-img">Are my interests matches yours?</div>
+            </div>
+            <p>Slide the slider below, and range it on how my interests matches yours!</p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="10" value="10" class="slider" id="rate">
+                <p style="text-align: center;">1 out of: <span id="slide"></span></p>
+            </div>
+            <!--javascript for the slider-->
+            <script>
+                var slider = document.getElementById("rate");
+                var output = document.getElementById("slide");
+                output.innerHTML = slider.value;
+
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                }
+            </script>
+        </div>
+    
+    <!--side content-->
+    <div class="column right" style="background-color: #30001cc4; border-radius: 8px;">
+        <h2>Explanations about my top 5 interests:</h2>
+            <br>
+            <h4>Astronomy</h4>
+            <p>I do really love the science behind the beauty of this vast, cold, and empty universe that we have. It fascinates me because how could it be so mysterious and complicated, and yet still holding its everlasting beauty.</p>
+            <h4>Love Songs</h4>
+            <p>I love listening to love songs since of course it makes me calm. And especially, it reminds me of a certain person.</p>
+            <h4>Science</h4>
+            <p>Of coure, if you love astronomy then that means you also love science, because Astronomy is one of the branch of Science. But aside from astronomy, I really love science overall (it's one of my favorite subject!)</p>
+            <h4>Gaming</h4>
+            <p>Of course, almost any kids and teens know about this, even some adult and elders!. Gaming is one of my interest and hobby, it makes me happy and relaxed. But I'm really interested on those great title games that have an amazing story on it such as: The Legend of Zelda, Final Fantasy, Persona Series, and more.</p>
+            <h4>Coding</h4>
+            <p>Coding is one my interest and hobby, it always fascinates me and it is one of my passions. And this is the main ingridient to achieve my dream career.</p>
+    </div>
+    </div>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <p>This page contains the content for the Activity 4 and 6 in the Set B Activity.</p>
+    </footer>
+    </body>
+</html>
