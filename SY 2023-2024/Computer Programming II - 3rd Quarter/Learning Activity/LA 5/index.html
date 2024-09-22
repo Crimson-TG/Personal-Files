@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integers</title>
+    <style>
+        body {
+            background-color: #494d5f;
+            color: rgb(240, 240, 240);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
+            margin: 0%;
+            animation: fade-in 2.5s ease-in;
+            animation-iteration-count: 1;
+        }
+        @keyframes fade-in {
+            0% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+        header {
+            background-color: #add2eb;
+            color: #845883;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+            padding: 1.5%;
+        }
+        main {
+            padding: 2%;
+        }
+
+        #container-left {
+            float: left;
+            width: 30%;
+        }
+        #container-right {
+            float: right;
+            width: 70%;
+            font-size: 120%;
+        }
+        #container-right h1 {
+            text-align: center;
+            font-size: 200% !important;
+        }
+
+        #special-h1 {
+            animation: color-change-1 3s ease-in-out;
+            animation-delay: 3s;
+            animation-iteration-count: 1;
+        }
+        @keyframes color-change-1 {
+            0% {
+                color: rgb(240, 240, 240);
+            }
+            50% {
+                color: #d08df4;
+            }
+            100% {
+                color: rgb(240, 240, 240);
+            }
+        }
+
+        #special-h1-2 {
+            animation: color-change-2 3s ease-in-out;
+            animation-iteration-count: 1;
+            animation-delay: 6s;
+        }
+        @keyframes color-change-2 {
+            0% {
+                color: rgb(240, 240, 240);
+            }
+            50% {
+                color: #d08df4;
+            }
+            100% {
+                color: rgb(240, 240, 240);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The JavaScript Loop Statement</h1>
+    </header>
+    <main>
+        <div id="container-left">
+            <script>
+                var a;
+                var b;
+    
+                b = prompt('Please enter a number greater than 0.', 0);
+
+                for (let a = 0; a <= b; a++) {
+                    document.write('<br /><h3>LINE ', a, '<h3 />')
+                }
+            </script>
+        </div>
+
+        <div id="container-right">
+            <h1>How does <span id="special-h1">JavaScript Loop</span> work?</h1>
+            <p>A JavaScript for loop <mark>executes a block of code as long as a specified condition is true</mark>. JavaScript for loops take three arguments: initialization, condition, and increment. The condition expression is evaluated on every loop. A loop continues to run if the expression returns true.</p>
+
+            <h1>Where can I use the <span id="special-h1-2">Loop Function</span>?</h1>
+            <p>In programming, loops are used <mark>to repeat a block of code</mark>. For example, if you want to show a message 100 times, then you can use a loop. It's just a simple example; there is so much more that you can achieve by using JavaScript Loop function.</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+    <style>
+        body {
+            background-color: #002642;
+            color: #fefefe;
+            font-family: Arial, Helvetica, serif;
+            margin: 0%;
+            animation: transition 3s ease-out;
+            animation-iteration-count: 1;
+        }
+        @keyframes transition {
+            0% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+        header {
+            background-color: #00a699;
+            text-align: center;
+            padding: 1%;
+            font-size: 150%;
+        }
+        main {
+            padding: 3%;
+            text-align: center;
+            font-size: 120%;
+        }
+        #container {
+            border-top: 2px solid rgb(59, 59, 59);
+            padding-top: 4%;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>The JavaScript Object</h2>
+    </header>
+    <main>
+    <p id="self"></p>
+    <p id="mother"></p>
+    <p id="father"></p>
+    <p id="fave_hero"></p>
+    <p id="fave_car"></p>
+        <script>
+            const mySelf = {eye: 'Thin Almonds', height: '5.7m', weight: '55 Kilograms', age: '17 years', gradeLevelSection: 'ICT11-B'};
+            document.getElementById('self').innerHTML = "I'm Troy Gian A. Cadano and i'm " + mySelf.age + ' ' + "younger. I Weight " + mySelf.weight + ' ' + "and my height is " + mySelf.height + '. ' + "My eye type is " + mySelf.eye + '. ' + "I'm currently taking ICT(Computer Programming) strand and my section is  " + mySelf.gradeLevelSection + '.';
+
+            const myMother = {eye: 'Almonds', height: '5.3m', weight: '65 Kilograms', age: '36 years', occupation: 'Call Center Agent'};
+            document.getElementById('mother').innerHTML = "My mother's name is Alona Apuntar " + myMother.age + ' ' + "younger. She Weight " + myMother.weight + ' ' + "and her height is " + myMother.height + '. ' + "Her eye type is " + myMother.eye + '. ' + "She works as a " + myMother.occupation + '.';
+
+            const myFather = {eye: 'Thin Almonds', height: '5.5m', weight: '60 Kilograms', age: '37 years', town: 'Bicol'};
+            document.getElementById('father').innerHTML = "My father's name is Jeffrey Cadano " + myFather.age + ' ' + "younger. He Weight " + myFather.weight + ' ' + "and his height is " + myFather.height + '. ' + "His eye type is " + myFather.eye + '. ' + "He currently lives in " + myFather.town + '.';
+
+            const faveHero = {name: 'Spider-Man', realName: 'Toby Maguire', symbol: 'Spider', power: 'Web-Shooters', trait: 'Spider Senses'};
+            document.getElementById('fave_hero').innerHTML = 'My favorite hero name is ' + faveHero.realName + ' and also known as ' + faveHero.name + '. His power is ' + faveHero.power + '. and His special trait is ' + faveHero.trait + '.';
+
+            const faveCar = {model: 'Lotus Exige', carEngine: 'Rover K Series inline-four engine', topSpeed: '219 km/h', gearBox: "five gearbox", price: '$61,500.99'};
+            document.getElementById('fave_car').innerHTML = 'My favorite car is ' + faveCar.model + '. It uses ' + faveCar.carEngine + ' with ' + faveCar.gearBox + ' reaching ' + faveCar.topSpeed + '. And it goes around for ' + faveCar.price + '.';
+        </script>
+
+        <div id="container">
+            <h2>JavaScript Object Description</h2>
+            <p>Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype, although these properties may be shadowed (a.k.a. overridden). The only objects that don't inherit from Object.prototype are those with null prototype, or descended from other null prototype objects.
+
+                Changes to the Object.prototype object are seen by all objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior. To make it more secure, Object.prototype is the only object in the core JavaScript language that has immutable prototype — the prototype of Object.prototype is always null and not changeable.</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even</title>
+    <style>
+        body {
+            background-color: #009688;
+            color: #ffffff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
+            margin: 0%;
+        }
+        header {
+            background-color: #00796b;
+            font-size: 250%;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 1%;
+        }
+        main {
+            padding: 3%;
+            float: left;
+            font-size: 125%;
+        }
+
+        #container-left {
+            float: left;
+            width: 60%;
+        }
+        #container-right {
+            float: right;
+            width: 40%;
+        }
+
+        #total {
+            animation: zoom-in 3s ease-out;
+            animation-iteration-count: 1;
+        }
+        @keyframes zoom-in {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.5, 1.5);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Odd or Even?</p>
+    </header>
+    <main>
+        <div id="container-left">
+        <p id="even&odd"></p>
+        <p id="even&odd2"></p>
+        <p id="even&odd3"></p>
+        <p id="even&odd4"></p>
+        <p id="even&odd5"></p>
+        <p id="even&odd6"></p>
+        <p id="even&odd7"></p>
+        <p id="even&odd8"></p>
+        <p id="even&odd9"></p>
+        <p id="even&odd10"></p>
+        </div>
+
+        <div id="container-right">
+            <h3 id="total"></h3>
+        </div>
+        
+        <script>
+            var a;
+            var b;
+            var c;
+            var d;
+            var e;
+            var f;
+            var g;
+            var h;
+            var i;
+            var j;
+
+            var zA;
+            var zB;
+            var zC;
+            var zD;
+            var zE;
+            var zF;
+            var zG;
+            var zH;
+            var zI;
+            var zJ;
+
+            var totalSum;
+
+            //get the value from user
+            a = prompt('Please enter a number greater than 0.', 0);
+            b = prompt('Please enter a number greater than 0.', 0);
+            c = prompt('Please enter a number greater than 0.', 0);
+            d = prompt('Please enter a number greater than 0.', 0);
+            e = prompt('Please enter a number greater than 0.', 0);
+            f = prompt('Please enter a number greater than 0.', 0);
+            g = prompt('Please enter a number greater than 0.', 0);
+            h = prompt('Please enter a number greater than 0.', 0);
+            i = prompt('Please enter a number greater than 0.', 0);
+            j = prompt('Please enter a number greater than 0.', 0);
+
+            zA = parseInt(a);
+            zB = parseInt(b);
+            zC = parseInt(c);
+            zD = parseInt(d);
+            zE = parseInt(e);
+            zF = parseInt(f);
+            zG = parseInt(g);
+            zH = parseInt(h);
+            zI = parseInt(i);
+            zJ = parseInt(j);
+
+            if (zA % 2 == 0) {
+                document.getElementById('even&odd').innerHTML = 'The number is EVEN ' + a
+            } else {
+                document.getElementById('even&odd').innerHTML = 'The number is ODD ' + a
+            }
+            
+            if (zB % 2 == 0) {
+                document.getElementById('even&odd2').innerHTML = 'The number is EVEN ' + b
+            } else {
+                document.getElementById('even&odd2').innerHTML = 'The number is ODD ' + b
+            } 
+            
+            if (zC % 2 == 0) {
+                document.getElementById('even&odd3').innerHTML = 'The number is EVEN ' + c
+            } else {
+                document.getElementById('even&odd3').innerHTML = 'The number is ODD ' + c
+            }
+
+            if (zD % 2 == 0) {
+                document.getElementById('even&odd4').innerHTML = 'The number is EVEN ' + d
+            } else {
+                document.getElementById('even&odd4').innerHTML = 'The number is ODD ' + d
+            }
+
+            if (zE % 2 == 0) {
+                document.getElementById('even&odd5').innerHTML = 'The number is EVEN ' + e
+            } else {
+                document.getElementById('even&odd5').innerHTML = 'The number is ODD ' + e
+            }
+
+            if (zF % 2 == 0) {
+                document.getElementById('even&odd6').innerHTML = 'The number is EVEN ' + f
+            } else {
+                document.getElementById('even&odd6').innerHTML = 'The number is ODD ' + f
+            }
+
+            if (zG % 2 == 0) {
+                document.getElementById('even&odd7').innerHTML = 'The number is EVEN ' + g
+            } else {
+                document.getElementById('even&odd7').innerHTML = 'The number is ODD ' + g
+            }
+
+            if (zH % 2 == 0) {
+                document.getElementById('even&odd8').innerHTML = 'The number is EVEN '+ h
+            } else {
+                document.getElementById('even&odd8').innerHTML = 'The number is ODD ' + h
+            }
+
+            if (zI % 2 == 0) {
+                document.getElementById('even&odd9').innerHTML = 'The number is EVEN ' + i
+            } else {
+                document.getElementById('even&odd9').innerHTML = 'The number is ODD ' + i
+            }
+
+            if (zJ % 2 == 0) {
+                document.getElementById('even&odd10').innerHTML = 'The number is EVEN ' + j
+            } else {
+                document.getElementById('even&odd10').innerHTML = 'The number is ODD ' + j
+            }
+
+            totalSum = (parseFloat(a) + parseFloat(b) + parseFloat(c) + parseFloat(d) + parseFloat(e) + parseFloat(f) + parseFloat(g) + parseFloat(h) + parseFloat(i) + parseFloat(j));
+            document.getElementById('total').innerHTML = 'The total summation is: ' + totalSum;
+    </script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semestral Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Semestral Grade Calculator</h1>
+    </header>
+    <main>
+        <div id="container-left">
+            <script>
+                var studentName;
+                var studentNum;
+                var quiz;
+                var recitation;
+                var longTest;
+                var project;
+                var attendance;
+                var exam;
+                var totalGrade;
+
+                studentName = prompt('Please enter your name. (Last, First and Middle)');
+                studentNum = prompt('Please enter your student number.');
+                quiz = prompt('Please enter your quiz scores.');
+                recitation = prompt('Please enter your recitations score.');
+                longTest = prompt('Please enter your long tests score.');
+                project = prompt('Please enter your project score.');
+                attendance = prompt('Please enter your attendance scores.');
+                exam = prompt('Please enter your exam score.');
+
+                totalGrade = (parseFloat(quiz) * 0.10 + parseFloat(recitation) * 0.15 + parseFloat(longTest) * 0.15 + parseFloat(project) * 0.35 + parseFloat(attendance) * 0.05 + parseFloat(exam) * 0.20);
+            
+                document.write('<h3>', studentName, '</h3>');
+                document.write('<br>', '<p>', studentNum, '</p>');
+                document.write('<br>', '<p>','Your Total Grade Is:', '</p>');
+                document.write('<br>', '<h1>', totalGrade, '</h1>');
+            </script>
+        </div>
+
+        <div id="container-right">
+            <h5>Criteria</h5>
+            
+            <p>Quiz = 10%</p>
+            <p>Recitation = 15%</p>
+            <p>Long Test = 15%</p>
+            <p>Project = 35%</p>
+            <p>Attendance = 5%</p>
+            <p>Exam = 20%</p>
+            <br>
+            <a href="index.html">Refresh</a>
+        </div>
+    </main>
+</body>
+</html>

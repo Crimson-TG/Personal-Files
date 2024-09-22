@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <style>
+        body {
+            background-color: rgb(18, 18, 18);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #fff;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        #form {
+            background-color: rgb(25, 25, 25);
+            padding: 2% 10%;
+            margin: 10% 25%;
+            border: #64c2ec solid 3px;
+            border-radius: 25px;
+            animation: border-color-change 3s infinite linear;
+        }
+        @keyframes border-color-change {
+            0% {
+                border-color: #64c2ec;
+            }
+            50% {
+                border-color: #ff0000;
+            }
+        }
+
+        #special_txt {
+            font-size: 180%;
+        }
+        
+        #top_form {
+            text-align: left;
+            padding: 5% 0%;
+        }
+
+        #input_form label {
+            font-size: 120%;
+        }
+        
+        #input_form input {
+            border: #64c2ec solid 2px;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 1%;
+            animation: border-color-change 3s infinite linear;
+        }
+
+        #input_form button {
+            text-align: center;
+            padding: 2% 4%;
+            font-weight: 620;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            font-size: 104.5%;
+            border-radius: 5px;
+            border: none;
+            background-color: #64c2ec;
+        }
+
+        #input_form button:hover {
+            animation: background-color-change 1.5s linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes background-color-change {
+            0% {
+                background-color: #64c2ec;
+            }
+            50% {
+                background-color: #ff0000;
+            }
+        }
+
+        #img {
+            float: right;
+            width: 35%;
+            height: auto;
+            padding-left: 15%;
+        }
+
+        #output_form {
+            border-top: rgb(40, 40, 40) solid 2px;
+            margin-top: 4%;
+            font-size: 120%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="form">
+            <h2 id="special_txt">Age Identifier</h2>
+            <div id="top_form">
+                <div id="input_form">
+                    <img src="me.jpg" alt="Me" id="img">
+
+                    <label for="name">Enter your name:</label><br>
+                    <input type="text" id="name" placeholder="Your name"><br><br>
+
+                    <label for="age">Enter your age:</label><br>
+                    <input type="number" id="age" placeholder="Your age"><br><br>
+
+                    <button onclick="verifyAge()" id="input">Evaluate</button>
+                </div>
+            </div>
+
+            <div id="output_form">
+                <p id="nameInput"></p>
+                <p id="result"></p>
+            </div>
+        </div>
+
+        <script>
+            function verifyAge() {
+                const ageInput = document.getElementById("age");
+                const age = parseInt(ageInput.value, 10);
+            
+                const input = document.getElementById("name").value;
+                document.getElementById('nameInput').innerHTML = input;
+
+                if (isNaN(age)) {
+                    document.getElementById("result").textContent = "Please enter your age.";
+                } else {
+                    if (age >= 18) {
+                        document.getElementById("result").textContent = "You are old enough.";
+                    } else {
+                        document.getElementById("result").textContent = "You are not old enough.";
+                    }
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>

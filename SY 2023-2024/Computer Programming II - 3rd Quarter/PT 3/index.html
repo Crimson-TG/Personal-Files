@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODD or EVEN</title>
+    <style>
+        body {
+            background-color: #292929;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+       
+        header {
+            background-color: #ffc815;
+            color: #292929 !important;
+            padding: 1%;
+            text-align: center;
+        }
+      
+        main {
+            padding: 1.5% 1.5%;
+        }
+       
+        #result {
+            float: left;
+            width: 50%;
+            padding-left: 3%;
+        }
+        
+        #container__right {
+            float: right;
+            width: 20%;
+            font-size: 120%;
+            border: thin solid white;
+            padding: 3% 5%;
+            background-color: #313131;
+            box-shadow: #1f1f1f 16px 18px;
+            margin-right: 3%;
+            margin-top: 0.5%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Odd and Even</h2>
+    </header>
+    <main>
+        <div id="result"></div>
+        <script>
+             document.addEventListener('DOMContentLoaded', function() {
+                const integers = [];
+                let evenSum = 0;
+                let oddSum = 0;
+      
+                for (let i = 1; i <= 25; i++) {
+                    let userInput = prompt(`Enter a value for variable ${i}: `);
+                    let parsedInt = parseInt(userInput);
+           
+                    if (!isNaN(parsedInt)) {
+                        integers.push(parsedInt);
+                        if (parsedInt % 2 === 0) {
+                            evenSum += parsedInt;
+                        } else {
+                            oddSum += parsedInt;
+                        }
+                    }
+                }
+      
+                const resultDiv = document.getElementById("result");
+      
+                integers.forEach(function(number, index) {
+                    let paragraph = document.createElement("p");
+                    paragraph.textContent = `The ${getOrdinalNumber(index + 1)} number is: ${number}`;
+                    resultDiv.appendChild(paragraph);
+                });
+      
+                let oddSumParagraph = document.createElement("p");
+                oddSumParagraph.textContent = "Odd sum: " + oddSum;
+                resultDiv.appendChild(oddSumParagraph);
+      
+                let evenSumParagraph = document.createElement("p");
+                evenSumParagraph.textContent = "Even sum: " + evenSum;
+                resultDiv.appendChild(evenSumParagraph);
+            });
+      
+            function getOrdinalNumber(number) {
+                let ordinalSuffix = "th";
+                const lastTwoDigits = number % 100;
+                if (lastTwoDigits < 11 || lastTwoDigits > 20) {
+                    switch (number % 10) {
+                        case 1:
+                        ordinalSuffix = "st";
+                        break;
+                        case 2:
+                        ordinalSuffix = "nd";
+                        break;
+                        case 3:
+                        ordinalSuffix = "rd";
+                        break;
+                        default:
+                        break;
+                    }
+                }
+                return number + ordinalSuffix;
+            }
+        </script>
+
+        <div id="container__right">
+            <div class="paragraph">
+                <h3>What is Odd Number?</h3>
+                <p>Odd numbers are the numbers that cannot be divided by 2 evenly. It cannot be divided into two seperate integers evenly. 
+                    If we divide an odd number by 2, then it will leave a remainder. The examples of odd numbers are 1, 3, 5, 7, etc.</p>
+            </div>
+            <div class="paragraph">
+                <h3>What is Even Number</h3>
+                <p>Even number is any number that can be divided exactly by 2. Even number always end up with the last digit as 0, 2, 4, 6, or 8. 
+                    Some examples of even numbers are 2, 4, 6, 8, 10, 12, 14, 16, etc.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

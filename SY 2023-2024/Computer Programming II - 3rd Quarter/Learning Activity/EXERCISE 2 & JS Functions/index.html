@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit to Celsius</title>
+    <style>
+        body {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0%;
+        }
+        header {
+            padding: 1%;
+            text-align: center;
+            font-size: 150%;
+            animation: color-changing 3s linear infinite;
+        }
+        main {
+            color: green;
+            padding: 2%;
+        }
+
+        #container-left {
+            float: left;
+            width: 30%;
+        }
+        #container-right {
+            float: right;
+            width: 70%;
+        }
+        @keyframes color-changing {
+            0% {
+                color: white;
+            }
+            25% {
+                color: rgb(104, 177, 206);
+            }
+            50% {
+                color: red;
+            }
+            75% {
+                color: violet;
+            }
+            100% {
+                color: white;
+            }
+        }
+
+        #container-right h3 {
+            animation: color-changing2 3s linear infinite;
+        }
+        @keyframes color-changing2 {
+            0% {
+                color: white;
+            }
+            25% {
+                color: rgb(104, 177, 206);
+            }
+            50% {
+                color: red;
+            }
+            75% {
+                color: violet;
+            }
+            100% {
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Temperature Converter</h2>
+    </header>
+    <main>
+        <div id="container-left">
+            <p id="conv"></p>
+            <p id="conv2"></p>
+        </div>
+        <script>
+            var a;
+            var b;
+
+            a = prompt('Please enter a Fahrenheit temperature to convert into Celsius.');
+            b = prompt('Please enter a Celsius temparature to convert it into Fahrenheit');
+
+            function toCelsius(f) {
+                return (5/9) * (f-32);
+            }
+            let value = toCelsius(a);
+            document.getElementById('conv').innerHTML = 'Fahrenheit to Celsius: ' + value;
+
+            function toFahrenheit(C) {
+                return (C * (9/5)) + 32;
+            }
+            let value2 = toFahrenheit(b);
+            document.getElementById('conv2').innerHTML = 'Celsius to Fahrenheit: ' + value2;
+        </script>
+        <div id="container-right">
+            <h3>The History of Celcius</h3>
+            <p>In 1742, Swedish astronomer Anders Celsius (1701-1744) created a temperature scale that was the reverse of the scale now known as "Celsius": 0 represented the boiling point of water, while 100 represented the freezing point of water.[5] In his paper Observations of two persistent degrees on a thermometer, he recounted his experiments showing that the melting point of ice is essentially unaffected by pressure. He also determined with remarkable precision how the boiling point of water varied as a function of atmospheric pressure. He proposed that the zero point of his temperature scale, being the boiling point, would be calibrated at the mean barometric pressure at mean sea level. This pressure is known as one standard atmosphere.</p>
+            
+            <h3>The History of Fahrenheit</h3>
+            <p>Fahrenheit proposed his temperature scale in 1724, basing it on two reference points of temperature. In his initial scale (which is not the final Fahrenheit scale), the zero point was determined by placing the thermometer in "a mixture of ice, water, and salis Armoniaci[note 1] [transl. ammonium chloride] or even sea salt".[12] This combination forms a eutectic system, which stabilizes its temperature automatically: 0 °F was defined to be that stable temperature. A second point, 96 degrees, was approximately the human body's temperature.[12] A third point, 32 degrees, was marked as being the temperature of ice and water "without the aforementioned salts".</p>
+        </div>
+    </main>
+</body>
+</html>
