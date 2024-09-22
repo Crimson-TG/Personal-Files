@@ -1,0 +1,47 @@
+body { /*This is used to style the body of the website*/
+    margin: 0px 0px;
+    font-style: georgia;
+    background-image: 
+    url('bg.jpg');
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header { /*this selectively selects the HTML header to style*/
+    background-color: midnightblue;
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+    line-height: 10px;
+    transition-duration: 1s;
+}
+header:hover {
+    padding: 30px;
+    transition-duration: 1s;
+}
+main {
+    background-color: rgba(26, 26, 26, 0.363);
+    padding: 20px 30px;
+    text-align: center;
+    color: white;
+}
+main h1 {
+    font-size: 50px;
+    transition-duration: 1s;
+    border-radius: 5px;
+    margin: 20px 0px; /*this is the margin for the content*/
+    text-align: left !important;
+}
+main h1:hover {
+    border-left: thick solid rgb(58, 58, 218);
+    border-radius: 5px;
+    transition-duration: 1s;
+    padding: 10px 7px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.content {
+    text-align: left !important;
+}

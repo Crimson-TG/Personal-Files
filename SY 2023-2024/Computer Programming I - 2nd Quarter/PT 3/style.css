@@ -1,0 +1,60 @@
+body { /*This is used to style the body of the website*/
+    margin: 0px 0px;
+    font-style: georgia;
+    background-image: 
+    url('bg.jpg');
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header { /*this selectively selects the HTML header to style*/
+    background-color: midnightblue;
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+    line-height: 10px;
+    transition-duration: 1s;
+}
+header:hover {
+    padding: 30px;
+    transition-duration: 1s;
+}
+main {
+    background-color: rgba(26, 26, 26, 0.363);
+    padding: 20px 30px;
+    text-align: center;
+    color: white;
+}
+main h1 {
+    font-size: 50px;
+    transition-duration: 1s;
+    border-radius: 5px;
+    margin: 40px 200px;
+}
+
+footer {
+    background-color: rgb(26, 26, 26);
+    padding: 20px 30px;
+    text-align: center;
+    color: white;
+}
+footer h1 {
+    font-size: 50px;
+    transition-duration: 1s;
+    border-radius: 5px;
+    margin: 40px 200px; /*this is the margin for the content*/
+}
+.container {
+    transition-duration: 1s;
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container:hover {
+    padding: 30px 10px;
+    transition-duration: 1s;
+    border-left: thick solid rgb(58, 58, 218);
+    border-right: thick solid rgb(58, 58, 218)
+}

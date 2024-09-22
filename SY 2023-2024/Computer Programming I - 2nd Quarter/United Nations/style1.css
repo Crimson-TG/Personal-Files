@@ -1,0 +1,49 @@
+body { /*this one is used to style the whole part of the body of the webpage*/
+    font-family: serif;
+    margin: 0px;
+    background-image:
+    url('bg.jpeg');
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header { /*this is used to style the header part of the webpage*/
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0px 30px 0px;
+    line-height: 5px;
+}
+main { /*and this one is used to style the whole main content*/
+    background-color: rgba(255, 255, 255, 0.486);
+    font-family: sans-serif;
+    margin: 15px 15px;
+    padding: 20px 30px;
+}
+
+blockquote { /*this is to put the blockquote text inside of this border/box */
+    border: medium outset white;
+    padding: 20px;
+}
+
+main h3 {
+    border: thick hidden red;
+}
+main h3:hover {
+    border-left: thick solid red;
+    border-radius: 5px;
+    padding: 10px 5px;
+    transition: 0.5s;
+}
+
+main h2 {
+    border: thick hidden red;
+}
+main h2:hover {
+    border-left: thick solid red;
+    border-radius: 5px;
+    padding: 10px 5px;
+    transition: 0.5s;
+}

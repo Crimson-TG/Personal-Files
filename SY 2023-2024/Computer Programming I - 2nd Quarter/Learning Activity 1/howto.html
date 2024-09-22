@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>CSS - How To</title>
+    </head>
+    <body>
+        <header>
+            <p>CSS
+                <br>How To
+            </p>
+        </header>
+
+        <div class="topnav">
+            <a href="introduction.html">Introduction</a>
+            <a href="syntax.html">Syntax</a>
+            <a href="selectors.html">Selectors</a>
+            <a href="howto.html">How To</a>
+            <a href="comments.html">Comments</a>
+            <a href="colors.html">Colors</a>
+        </div>
+
+        <main>
+            <h3>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</h3>
+            <br>
+
+            <h2>Three Ways To Add CSS</h2>
+            <p>There are three ways of inserting a style sheet:</p>
+            <ul>
+                <li>External CSS</li>
+                <li>Internal CSS</li>
+                <li>Inline CSS</li>
+            </ul>
+            <br>
+
+            <h2>External CSS</h2>
+            <p>With an external style sheet, you can change the look of an entire website by changing just one file!
+                <br>Each HTML page must include a reference to the external style sheet file inside the <kbd>link</kbd> element, inside the head section.
+            </p>
+            <h6>Note:</h6>
+            <p><em>An external style sheet can be written in any text editor, and must be saved with a .css extension.</em>
+                <br><em>The external .css file should not contain any HTML tags.</em>
+            </p>
+            <br>
+
+            <h2>Internal CSS</h2>
+            <p>An internal style sheet may be used if one single HTML page has a unique style.
+                <br>The internal style is defined inside the <kbd>style</kbd> element, inside the head section.
+            </p>
+            <br>
+
+            <h2>Inline CSS</h2>
+            <p>An internal style sheet may be used if one single HTML page has a unique style.
+                <br>The internal style is defined inside the <kbd>style</kbd> element, inside the head section.
+            </p>
+            <br>
+
+            <h2>Multiple Style Sheets</h2>
+            <p>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used.</p>
+            <br>
+
+            <h2>Cascading Order</h2>
+            <p>What style will be used when there is more than one style specified for an HTML element?</p>
+            <p>All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+            <ol>
+                <li>Inline style (inside an HTML element)</li>
+                <li>External and internal style sheets (in the head section)</li>
+                <li>Browser default</li>
+            </ol>
+            <p>So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+        </main>
+    </body>
+</html>
